@@ -55,29 +55,26 @@ source /opt/ros/humble/setup.bash
 cd ~/ros2_ws
 colcon build --packages-select input_shaping_client
 source install/setup.bash
-
-Running the Action Client
+```
+---
+## Running the Action Client
 
 Before running the client, ensure that:
+- The robotic crane system is running
+- `joint_trajectory_controller` is active
+- The following action server is available:
 
-The robotic crane system is running
-
-joint_trajectory_controller is active
-
-The following action server is available:
-
+```text
 /joint_trajectory_controller/follow_joint_trajectory
-
+```
 
 Run the client:
-
+```
 ros2 run input_shaping_client input_shaping_client_node
-
-
-The node connects to the action server, sends a predefined velocity-based
-trajectory, and exits after execution completes.
-
-Repository Structure
+```
+---
+## Repository Structure
+```
 input_shaping_ros2/
 ├── LICENSE
 ├── README.md
@@ -86,14 +83,13 @@ input_shaping_ros2/
     ├── package.xml
     └── src/
         └── input_shaping_client.cpp
-
-License
-
+```
+---
+##License
 MIT License
-© 2025 Sanjay Maharjan
-
-Author
-
+2025 Sanjay Maharjan
+---
+## Author
 Sanjay Maharjan
-Mechanical Engineering (Robotics and Dynamics)
-Louisiana State University
+Mechanical Engineering
+Lousiana State University
